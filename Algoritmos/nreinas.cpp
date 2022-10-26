@@ -17,9 +17,9 @@ bool valido(int x1, int y1, int x2, int y2) {
         return true;
 }
 
-// Función recursiva que recive como referencia el arreglo que se va generando con la cantidad de reinas
+// Función recursiva que recive la posicón que voy resolviendo con la cantidad de reinas
 void genera(int pos, int &n) {
-        // Caso base, el arreglo ya llegó al tamaño que debía
+        // Caso base, ya llegue a la posición fuera del arreglo
         if (pos == n) {
                 for (vector<int>::iterator it = sol.begin(); it != sol.end(); it++) {
                         cout << *it << ", ";
@@ -31,17 +31,15 @@ void genera(int pos, int &n) {
                 for (int i = 1; i <= n; i++) {
                         val = true; // Asumo que son validos
                         // Itero en las reinas que ya puse para ver si la que quiero poner no ataca a ninguna ya puesta
-                        for (int j = 0; j < pos; j++) {
+                        for (int j = 0; j < pos && val; j++) {
                                 if (!valido(j, sol[j], pos, i)) {
                                         // Si ataca a alguna ya puesta pues la bandera se marca
                                         val = false;
                                 }
                         }
-                        // Si resulta ser una opción valida, aquí sucede la poda porque no continua con árboles que ya no darán resultados
+                        // Aquí sucede la poda porque no continua con árboles que ya no darán resultados
                         if (val) {
-                                // Se hace una copia del arreglo
-                                // Se le añade la solución
-                                // Se llama de nuevo pero ahora con un arreglo con un elemento más
+                                // Se llama de nuevo pero ahora con una posición mayor
                                 sol[pos] = i;
                                 genera(pos + 1, n);
                         }

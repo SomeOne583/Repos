@@ -8,11 +8,7 @@ vector<int> mochila;
 pair<vector<int>, int> mayor;
 vector<pair<int, int>> objetos;
 
-void solve(int pesoActual, int &pesoMaximo) {
-        int acum = 0;
-        for (size_t i = 0; i < mochila.size(); i++) {
-                acum += objetos[mochila[i]].second;
-        }
+void solve(int pesoActual, int acum, int &pesoMaximo) {
         if (acum > mayor.second) {
                 mayor.first = mochila;
                 mayor.second = acum;
@@ -20,7 +16,7 @@ void solve(int pesoActual, int &pesoMaximo) {
         for (size_t i = 0; i < objetos.size(); i++) {
                 if (find(mochila.begin(), mochila.end(), i) == mochila.end() && pesoActual + objetos[i].first <= pesoMaximo) {
                         mochila.push_back(i);
-                        solve(pesoActual + objetos[i].first, pesoMaximo);
+                        solve(pesoActual + objetos[i].first, acum + objetos[i].second, pesoMaximo);
                         mochila.pop_back();
                 }
         }
@@ -29,14 +25,14 @@ void solve(int pesoActual, int &pesoMaximo) {
 int main() {
         int mochilaSize = 10;
         objetos = {
-                { 3, 50 },
                 { 4, 40 },
-                { 5, 10 },
-                { 6, 30 }
+                { 6, 30 },
+                { 3, 50 },
+                { 5, 10 }
         };
         mayor = { {}, 0 };
 
-        solve(0, mochilaSize);
+        solve(0, 0, mochilaSize);
 
         cout << "[ ";
         for (size_t i = 0; i < mayor.first.size() - 1; i++) {
