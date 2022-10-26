@@ -1,0 +1,161 @@
+{
+        // Use IntelliSense to learn about possible attributes.
+        // Hover to view descriptions of existing attributes.
+        // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+        "version": "0.2.0",
+        "configurations": [
+                {
+                        "type": "java",
+                        "name": "Launch Current File",
+                        "request": "launch",
+                        "mainClass": "${file}"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch Arreglo",
+                        "request": "launch",
+                        "mainClass": "Arreglo",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch Billetes",
+                        "request": "launch",
+                        "mainClass": "Billetes",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch Caja",
+                        "request": "launch",
+                        "mainClass": "Caja",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch Calificacion",
+                        "request": "launch",
+                        "mainClass": "Calificacion",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch Conversor",
+                        "request": "launch",
+                        "mainClass": "Conversor",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch Cuenta",
+                        "request": "launch",
+                        "mainClass": "Cuenta",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch Equis",
+                        "request": "launch",
+                        "mainClass": "Equis",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch Evaluacion",
+                        "request": "launch",
+                        "mainClass": "Evaluacion",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch Fac_Num",
+                        "request": "launch",
+                        "mainClass": "Fac_Num",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch Factura",
+                        "request": "launch",
+                        "mainClass": "Factura",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch Frecuencia",
+                        "request": "launch",
+                        "mainClass": "Frecuencia",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch HorasEstudio",
+                        "request": "launch",
+                        "mainClass": "HorasEstudio",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch Juego",
+                        "request": "launch",
+                        "mainClass": "Juego",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch MiPrimerPrograma",
+                        "request": "launch",
+                        "mainClass": "MiPrimerPrograma",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch MiSegundoPrograma",
+                        "request": "launch",
+                        "mainClass": "MiSegundoPrograma",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch Pizzeria",
+                        "request": "launch",
+                        "mainClass": "Pizzeria",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch PrimerPrograma",
+                        "request": "launch",
+                        "mainClass": "PrimerPrograma",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch Salario",
+                        "request": "launch",
+                        "mainClass": "Salario",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch Serie",
+                        "request": "launch",
+                        "mainClass": "Serie",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch Triangulo",
+                        "request": "launch",
+                        "mainClass": "Triangulo",
+                        "projectName": "JAVA_c743cf05"
+                },
+                {
+                        "type": "java",
+                        "name": "Launch Venta",
+                        "request": "launch",
+                        "mainClass": "Venta",
+                        "projectName": "JAVA_c743cf05"
+                }
+        ]
+}

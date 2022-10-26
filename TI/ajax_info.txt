@@ -1,0 +1,6 @@
+<h1> Hola </h1>
+<p> Parrafo </p>
+<b> Importante </b>
+<br>
+<i> Inclinado </i>
+<img src="img/20210127_012723.jpg">

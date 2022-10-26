@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TI>
+<estudiante>
+        <nombre> Jan </nombre>
+        <apellido> Reyes </apellido>
+        <mat> 577441 </mat>
+        <crn> 27341 </crn>
+        <periodo> 202311 </periodo>
+</estudiante>
+
+<estudiante>
+        <nombre> Joel </nombre>
+        <apellido> López </apellido>
+        <mat> 570221 </mat>
+        <crn> 27341 </crn>
+        <periodo> 202311 </periodo>
+</estudiante>
+
+<estudiante>
+        <nombre> Alan </nombre>
+        <apellido> García </apellido>
+        <mat> 570434 </mat>
+        <crn> 27341 </crn>
+        <periodo> 202311 </periodo>
+</estudiante>
+
+<estudiante>
+        <nombre> Juan </nombre>
+        <apellido> Cuevas </apellido>
+        <mat> 611978 </mat>
+        <crn> 27341 </crn>
+        <periodo> 202311 </periodo>
+</estudiante>
+
+<estudiante>
+        <nombre> José </nombre>
+        <apellido> Humberto </apellido>
+        <mat> 531712 </mat>
+        <crn> 27341 </crn>
+        <periodo> 202311 </periodo>
+</estudiante>
+</TI>

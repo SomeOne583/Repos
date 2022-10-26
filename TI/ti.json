@@ -1,0 +1,41 @@
+{
+  "TI": {
+    "estudiantes": [
+      {
+        "nombre": "Jan",
+        "apellido": "Reyes",
+        "mat": 577441,
+        "crn": 27341,
+        "periodo": 202311
+      },
+      {
+        "nombre": "Joel",
+        "apellido": "López",
+        "mat": 570221,
+        "crn": 27341,
+        "periodo": 202311
+      },
+      {
+        "nombre": "Alan",
+        "apellido": "García",
+        "mat": 570434,
+        "crn": 27341,
+        "periodo": 202311
+      },
+      {
+        "nombre": "Juan",
+        "apellido": "Cuevas",
+        "mat": 611978,
+        "crn": 27341,
+        "periodo": 202311
+      },
+      {
+        "nombre": "José",
+        "apellido": "Humberto",
+        "mat": 531712,
+        "crn": 27341,
+        "periodo": 202311
+      }
+    ]
+  }
+}

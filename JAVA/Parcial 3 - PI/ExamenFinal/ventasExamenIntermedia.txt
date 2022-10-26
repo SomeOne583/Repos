@@ -1,0 +1,6 @@
+sabado,100000
+domingo,50000
+sabado,50000
+domingo,50000
+lunes,20000
+lunes,20000
