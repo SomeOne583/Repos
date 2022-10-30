@@ -7,8 +7,8 @@
 #include <cmath>
 
 int main() {
-        int cambio = 10, a, b;
-        std::vector<int> denominaciones = { 0, 1, 5, 6, 8 };
+        int cambio = 13, a, b;
+        std::vector<int> denominaciones = { 0, 1, 5, 6, 9 };
         std::vector<std::vector<int>> resultado;
 
         resultado.resize(denominaciones.size(), std::vector<int> (cambio + 1, 100));
