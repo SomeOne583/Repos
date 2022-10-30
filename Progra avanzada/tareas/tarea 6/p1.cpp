@@ -18,8 +18,8 @@ void kill(int f, int c) {
 }
 
 void solve() {
-        for (size_t f = 0; f < container.size(); f++) {
-                for (size_t c = 0; c < container[0].size(); c++) {
+        for (size_t f = 1; f < container.size() - 1; f++) {
+                for (size_t c = 1; c < container[0].size() - 1; c++) {
                         if (container[f][c]) {
                                 ciclos++;
                                 kill(f, c);
