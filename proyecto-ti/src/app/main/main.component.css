@@ -1,0 +1,25 @@
+mat-card.main-container {
+        background-color: lavender;
+        width: auto;
+        height: auto;
+}
+
+mat-card.form-container {
+        width: 30%;
+        height: auto;
+        margin-right: 0;
+        margin-left: auto;
+}
+
+mat-card.form-container mat-form-field {
+        width: 100%;
+        height: auto;
+}
+
+img {
+        height: 100px;
+}
+
+mat-toolbar {
+        background-color: transparent;
+}

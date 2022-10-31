@@ -1,0 +1,28 @@
+div.opcionesNavBar {
+        display: table;
+        width: 50%;
+        table-layout: fixed;
+}
+
+div.opcionesNavBar a {
+        color: white;
+        display: table-cell;
+        text-align: center;
+}
+
+div.opcionesNavBar span {
+        display: table-cell;
+        text-align: right;
+        width: 5%;
+}
+
+div.logoNombre {
+        display: table;
+        width: 10%;
+        table-layout: fixed;
+}
+
+div.logoNombre span {
+        display: table-cell;
+        text-align: left;
+}
