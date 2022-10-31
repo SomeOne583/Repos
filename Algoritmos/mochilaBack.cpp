@@ -1,3 +1,6 @@
+// Jan Carlo Reyes Martínez
+// Doy mi palabra de que he realizado esta actividad con integridad académica
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
