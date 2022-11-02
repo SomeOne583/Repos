@@ -46,11 +46,35 @@ string suma(string a, string b) {
 }
 
 int main() {
-        string a, b;
+        int resultadoInt, auxInt;
+        string a, b, resultado, aux;
         while (cin >> a) {
                 cin >> b;
 
-                
+                reverse(a.begin(), a.end());
+                reverse(b.begin(), b.end());
+
+                aux = "0";
+                for (size_t i = 0; i < b.size(); i++) {
+                        auxInt = 0;
+                        resultado = "";
+                        for (size_t j = 0; j < a.size(); j++) {
+                                resultadoInt = ((b[i] - 48) * (a[j] - 48));
+                                resultadoInt += auxInt;
+                                resultado += to_string(resultadoInt % 10);
+                                auxInt = resultadoInt / 10;
+                        }
+                        resultado += to_string(auxInt);
+                        reverse(resultado.begin(), resultado.end());
+                        for (size_t j = 0; j < i; j++) {
+                                resultado += "0";
+                        }
+                        aux = suma(aux, resultado);
+                }
+                while (aux[0] == '0' && aux.size() != 1) {
+                        aux.erase(aux.begin());
+                }
+                cout << aux << endl;
         }
 
         return 0;
