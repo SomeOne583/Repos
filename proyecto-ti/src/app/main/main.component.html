@@ -1,21 +1,17 @@
 <mat-card class = "main-container">
         <mat-card class = "form-container">
                 <h1>
-                        Registrate para participar por muchos descuentos
+                        Registrate para enterarte de muchos descuentos
                 </h1>
                 <mat-form-field appearance="outline">
                         <mat-label> Nombre </mat-label>
-                        <input matInput placeholder = "Jan Reyes">
+                        <input matInput placeholder = "Jan Reyes" #nombre>
                 </mat-form-field>
                 <mat-form-field appearance="outline">
-                        <mat-label> Número de contacto </mat-label>
-                        <input matInput placeholder = "8115681823">
+                        <mat-label> Correo </mat-label>
+                        <input matInput placeholder = "jan.reyes@udem.edu" #mail>
                 </mat-form-field>
-                <mat-form-field appearance="outline">
-                        <mat-label> Domicilio </mat-label>
-                        <input matInput placeholder = "La Aurora">
-                </mat-form-field>
-                <button mat-raised-button color = "primary">
+                <button mat-raised-button color = "primary" (click) = "sign(nombre.value, mail.value)">
                         Enviar
                 </button>
         </mat-card>
@@ -26,22 +22,10 @@
         <span style="flex: 1 1 auto"></span>
 </mat-toolbar>
 <mat-grid-list cols="3" rowHeight="3:1">
-        <mat-grid-tile>
-                <mat-card class = "sevicio">
+        <mat-grid-tile *ngFor = "let service of services">
+                <mat-card class = "sevicio" (click) = "comprar(service.name)">
                         <img src = "../../assets/llave-inglesa.png">
-                        Servicio 1
-                </mat-card>
-        </mat-grid-tile>
-        <mat-grid-tile>
-                <mat-card class = "sevicio">
-                        <img src = "../../assets/llave-inglesa.png">
-                        Servicio 2
-                </mat-card>
-        </mat-grid-tile>
-        <mat-grid-tile>
-                <mat-card class = "sevicio">
-                        <img src = "../../assets/llave-inglesa.png">
-                        Servicio 3
+                        {{ service.name }}
                 </mat-card>
         </mat-grid-tile>
 </mat-grid-list>

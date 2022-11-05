@@ -1,0 +1,32 @@
+{
+  "users": [],
+  "services": [
+    {
+      "id": 1,
+      "name": "Reparación de celular",
+      "cant": 0
+    },
+    {
+      "id": 2,
+      "name": "Reparación de laptop",
+      "cant": 0
+    },
+    {
+      "id": 3,
+      "name": "Reparación de impresora",
+      "cant": 0
+    },
+    {
+      "id": 4,
+      "name": "Reparación de electrodomésticos",
+      "cant": 0
+    },
+    {
+      "id": 5,
+      "name": "Ayuda para uso de electrónicos",
+      "cant": 0
+    }
+  ],
+  "orders": [
+  ]
+}

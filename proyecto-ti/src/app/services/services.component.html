@@ -1,1 +1,8 @@
-<p>Sección de servicios</p>
+<mat-grid-list cols = "2">
+        <mat-grid-tile *ngFor = "let service of services">
+                <mat-card class = "sevicio" (click) = "comprar(service.name)">
+                        <img src = "../../assets/llave-inglesa.png">
+                        {{ service.name }}
+                </mat-card>
+        </mat-grid-tile>
+</mat-grid-list>

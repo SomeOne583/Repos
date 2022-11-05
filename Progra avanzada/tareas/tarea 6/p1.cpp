@@ -1,3 +1,8 @@
+// Juan Manuel Cuevas Gaytan 611978
+// Jan Carlo Reyes 577441
+// Damos nuestra palabra de que hemos realizado esta actividad con integridad académica
+// Problema 1 Organisms
+
 #include <iostream>
 #include <vector>
 

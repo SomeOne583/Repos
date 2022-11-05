@@ -4,27 +4,31 @@
 
 using namespace std;
 
+vector<int> monedas;
 vector<vector<long>> calculos;
 
-long monedas(int n, int i) {
+long formas(int n, int i) {
         if (n == 0) {
                 return 1;
-        } else if (n < 0 || i > 21) {
-                return 0;
-        } else {
-                if (calculos[n][i] == 0) {
-                        calculos[n][i] = monedas(n - pow(i, 3), i) + monedas(n, i + 1); 
-                }
-                return calculos[n][i];
         }
+        if (n < 0 || i > 20) {
+                return 0;
+        }
+        if (calculos[n][i] == -1) {
+                calculos[n][i] = formas(n - monedas[i], i) + formas(n, i + 1); 
+        }
+        return calculos[n][i];
 }
 
 int main() {
         int k;
+        for (int i = 0; i < 21; i++) {
+                monedas.push_back((i + 1) * (i + 1) * (i + 1));
+        }
 
-        calculos.resize(10000, vector<long>(22, 0));
+        calculos.resize(10000, vector<long>(21, -1));
         while (cin >> k) {
-                cout << monedas(k, 1) << "\n";
+                cout << formas(k, 0) << "\n";
         }
         
         return 0;

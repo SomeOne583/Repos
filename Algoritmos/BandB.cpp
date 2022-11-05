@@ -83,6 +83,10 @@ int main() {
                         }
                 }
                 if (upperLocal < upper) {
+                        for (size_t i = 0; i < e.size(); i++) {
+                                cout << e[i] << ", ";
+                        }
+                        cout << "\n";
                         upper = upperLocal;
                 } 
                 for (int i = e.back() + 1; i <= 4; i++) {
