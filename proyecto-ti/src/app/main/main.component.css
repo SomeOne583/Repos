@@ -23,3 +23,7 @@ img {
 mat-toolbar {
         background-color: transparent;
 }
+
+mat-card.tarjeta-servicio {
+        width: 90%;
+}
