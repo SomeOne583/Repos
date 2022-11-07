@@ -5,14 +5,18 @@
 using namespace std;
 
 long cant;
-long factoriales[21];
+unsigned long factoriales[21];
 int repeticiones[10];
 
-long factorial(int n) {
+unsigned long factorial(int n) {
         if (factoriales[n] == -1) {
                 factoriales[n] = n * factorial(n - 1);
         }
         return factoriales[n];
+        // if (n == 0) {
+        //         return 1;
+        // }
+        // return n * factorial(n - 1);
 }
 
 void solve(string actual, int index, int acum, int N) {
@@ -22,7 +26,7 @@ void solve(string actual, int index, int acum, int N) {
                 for (size_t i = 0; i < actual.size(); i++) {
                         repeticiones[actual[i] - 48]++;
                 }
-                for (int i = 0; i < 10; i++) {
+                for (int i = 1; i < 10; i++) {
                         perms /= factorial(repeticiones[i]);
                 }
                 cant += perms;
@@ -35,6 +39,7 @@ void solve(string actual, int index, int acum, int N) {
         }
 }
 
+// Este solve jala (termina en <1s) para N <= 13
 void solveMalo(string actual, int acum, int N) {
         if (actual.size() && acum == N) {
                 cant++;
@@ -54,12 +59,11 @@ int main() {
         int k, N;
         memset(factoriales, -1, sizeof(factoriales));
         factoriales[0] = 1;
-
         cin >> k;
 
         while (k--) {
-                cant = 0;
                 cin >> N;
+                cant = 0;
                 if (N == 1) {
                         cant++;
                 }

@@ -1,3 +1,7 @@
+// Jan Carlo Reyes Martínez
+// 577441
+// Doy mi palabra de que he realizado esta actividad con integridad académica
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -10,6 +14,7 @@ vector<int> trabajos;
 vector<bool> hechos;
 vector<vector<int>> datos;
 
+// Implementación con backtracking
 void solve(int tiempo, int trabajo) {
         for (int i = trabajo; i <= 4; i++) {
                 if (tiempo + datos[2][i - 1] <= datos[1][i - 1]) {
@@ -55,9 +60,9 @@ int main() {
                 /* Time */ { 1, 2, 1, 1 }
         };
 
-        solve(0, 1);
+        // solve(0, 1);
 
-        cout << "///////" << endl;
+        // cout << "///////" << endl;
 
         int tiempo;
         queue<vector<int>> fila;
@@ -70,6 +75,8 @@ int main() {
 
         upper = 1000;
         int upperLocal;
+        vector<int> sol;
+        // Implementación con filas
         while (!fila.empty()) {
                 tiempo = 0;
                 upperLocal = 0;
@@ -83,10 +90,10 @@ int main() {
                         }
                 }
                 if (upperLocal < upper) {
+                        sol.clear();
                         for (size_t i = 0; i < e.size(); i++) {
-                                cout << e[i] << ", ";
+                                sol.push_back(e[i]);
                         }
-                        cout << "\n";
                         upper = upperLocal;
                 } 
                 for (int i = e.back() + 1; i <= 4; i++) {
@@ -99,7 +106,11 @@ int main() {
                 fila.pop();
         }
 
-        cout << upper << endl;
+        cout << "Trabajos: ";
+        for (int i = 0; i < sol.size(); i++) {
+                cout << sol[i] << ", ";
+        }
+        cout << "\nPenalidad: " << upper << endl;
         
         return 0;
 }
