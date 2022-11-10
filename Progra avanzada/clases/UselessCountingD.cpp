@@ -32,7 +32,11 @@ int main() {
 
         while (k--) {
                 cin >> N;
-                cout << solve(N, N) << "\n";
+                if (N == 1) {
+                        cout << solve(N, N) + 1 << "\n";
+                } else {
+                        cout << solve(N, N) << "\n";
+                }
         }
         
         return 0;

@@ -1,3 +1,8 @@
+// Juan Manuel Cuevas Gaytan 611978
+// Jan Carlo Reyes Martínez 577441
+// Damos nuestra palabra de que hemos realizado esta actividad con integridad académica
+// Problema 2 Useless Counting
+
 #include <iostream>
 #include <cmath>
 #include <algorithm>
@@ -5,7 +10,7 @@
 
 using namespace std;
 
-unsigned long long calculos[100][100];
+unsigned long long calculos[21][21];
 
 unsigned long long solve(int n, int l) {
         if (calculos[n][l] == -1) {
@@ -14,7 +19,7 @@ unsigned long long solve(int n, int l) {
                 } else if (l == 1) {
                         calculos[n][l] = 1;
                 } else {
-                        long acum = 0;
+                        unsigned long long acum = 0;
                         for (int i = n; i >= max(0, n - 9); i--) {
                                 acum += solve(i, l - 1);
                         }
@@ -32,7 +37,11 @@ int main() {
 
         while (k--) {
                 cin >> N;
-                cout << solve(N, N) << "\n";
+                if (N == 1) {
+                        cout << "2\n";
+                } else {
+                        cout << solve(N, N) << "\n";
+                }
         }
         
         return 0;

@@ -18,4 +18,7 @@ e = input()
 e = e.split(" ")
 for i in range(k):
         N = int(e[i])
-        print(solve(N, N))
+        if (N == 1):
+                print(solve(N, N) + 1)
+        else:
+                print(solve(N, N))
