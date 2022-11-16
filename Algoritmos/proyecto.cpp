@@ -181,16 +181,13 @@ void Greedy(int acum)
         int nodoActual = caminoGreedy.back();
 
         // Iteramos en todos los posibles nodos
-        for (int i = 0; i < grafo.size(); i++) {
+        for (int i = 0; i < grafo.size(); i++)
                 // Revisamos que el nodo no sea parte del camino que ya va construido
-                if (find(caminoGreedy.begin(), caminoGreedy.end(), i) == caminoGreedy.end()) {
+                if (find(caminoGreedy.begin(), caminoGreedy.end(), i) == caminoGreedy.end())
                         // Revisamos que sea mejor opción que el nodoMenor que tenemos hasta el momento
                         // Si nodoMenor = -1 se reemplaza directamente porque significa que es el primero que analizamos
-                        if (nodoMenor == -1 || grafo[nodoActual][i] < grafo[nodoActual][nodoMenor]) {
+                        if (nodoMenor == -1 || grafo[nodoActual][i] < grafo[nodoActual][nodoMenor])
                                 nodoMenor = i;
-                        }
-                }
-        }
 
         // Se agrega al camino el nodoMenor que encontramos después de iterar por todos los posibles
         caminoGreedy.push_back(nodoMenor);
@@ -297,9 +294,8 @@ int main()
                 cout << ">>> ";
 
                 // Valido la entrada
-                while (cin >> eleccion && !(eleccion == "1" || eleccion == "2" || eleccion == "3" || eleccion == "4" || eleccion == "5")) {
+                while (cin >> eleccion && !(eleccion == "1" || eleccion == "2" || eleccion == "3" || eleccion == "4" || eleccion == "5"))
                         cout << "Ingresa un valor válido\n>>> ";
-                }
 
                 if (eleccion == "1") {
                         // Le imprimo un mensaje cómico
