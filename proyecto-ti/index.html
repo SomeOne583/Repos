@@ -182,7 +182,8 @@
                     data: {
                         nombre: $("#nom-compra").val(),
                         telefono: $("#tel-compra").val(),
-                        direccion: $("#dir-compra").val()
+                        direccion: $("#dir-compra").val(),
+                        id_servicio: servicios[servicioActivo]["id"]
                     },
                     type: "POST",
                     success: () => {

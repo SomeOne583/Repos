@@ -12,7 +12,7 @@ if (!$conn) {
 }
 
 $sql = 'INSERT INTO users (nombre, correo) VALUES ("' . $_POST["nombre"] . '", "' . $_POST["correo"] . '");';
-$result = mysqli_query($conn, $sql);
+mysqli_query($conn, $sql);
 
 mysqli_close($conn);
 ?>
