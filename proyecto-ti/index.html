@@ -1,0 +1,209 @@
+        <!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <title>Sistemas</title>
+    </head>
+    <body>
+        <header>
+            <nav class="px-5 navbar navbar-expand-sm bg-success">
+                <div class="container-fluid">
+                    <!--LOGO-->
+                    <a class="navbar-brand" href='index.html'>
+                        <img src="img/LogoTI.png" alt="Logo" width="50px">
+                    </a>
+                    <h1 class="col nav-item text-white">Uchimachima</h1>
+                    <!--LINKS-->
+                    <ul class="row nav navbar-nav justify-content-end">
+                        <li class="col nav-item">
+                            <a class="nav-link text-white" href='index.html'>
+                                <h3>Inicio</h3>
+                            </a>
+                        </li>
+                        <li class="col nav-item">
+                            <a class="nav-link text-white" href="servicios.html">
+                                <h3>Servicios</h3>
+                            </a>
+                        </li>
+                        <li class="col nav-item">
+                            <a class="nav-link text-white" href="conocenos.html">
+                                <h3>Conócenos</h3>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <hr class="py-0" style="height:10px; opacity: 1; color: #0D6EFD; background-color: #0D6EFD">
+        <main class="px-5 container-fluid">
+            <!--BANNER-->
+            <div class="col img-fluid bg-image" style="background-image: url('img/banner.svg');">
+                <div class="py-2 px-2 col-md-3">
+                    <div class="bg-success px-3 py-3">
+                        <h5 class="text-white">Regístrate para participar por descuentos en nuestros servicios</h5>
+                        <form id="registro-mail">
+                            <label class="text-white">Nombre</label>
+                            <input id="nombre" type="text" class="form-control" placeholder="Joel" required>
+                            <label class="text-white">Correo</label>
+                            <input id="correo" type="email" class="form-control" placeholder="joel.lopezp@udem.edu" required>
+                            <button class="btn bg-primary text-white mt-3" type="submit">Registrarme</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--TARJETAS-->
+            <h3 class="pt-4">Servicios frecuentes</h3>
+            <div class="row mt-2">
+                <!--TARJETA 1-->
+                <div class="card col-md bg-success text-white mx-2">
+                    <h4  id="nom0" class="card-title"></h4>
+                    <img id="img0" class="card-img-top" style="height: 250px;">
+                    <div class="card-body">
+                        <p id="desc0" class="card-text"></p>
+                        <button type="button" class="btn btn-primary" onclick="compra(0)">Ordenar servicio</button>
+                    </div>
+                </div>
+                <!--TARJETA 2-->
+                <div class="card col-md bg-success text-white mx-2">
+                    <h4  id="nom1" class="card-title"></h4>
+                    <img id="img1" class="card-img-top" style="height: 250px;">
+                    <div class="card-body">
+                        <p id="desc1" class="card-text"></p>
+                        <button type="button" class="btn btn-primary" onclick="compra(1)">Ordenar servicio</button>
+                    </div>
+                </div>
+                <!--TARJETA 3-->
+                <div class="card col-md bg-success text-white mx-2">
+                    <h4  id="nom2" class="card-title"></h4>
+                    <img id="img2" class="card-img-top" style="height: 250px;">
+                    <div class="card-body">
+                        <p id="desc2" class="card-text"></p>
+                        <button type="button" class="btn btn-primary" onclick="compra(2)">Ordenar servicio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="modal_comprar">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <!--ENCABEZADO MODAL-->
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="servicio_comprar"></h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <!--BODY MODAL-->
+                        <div class="modal-body">
+                            <form id="form-compra">
+                                <label>Nombre</label>
+                                <input type="text" class="form-control" id="nom-compra" placeholder="Joel" required>
+                                <label>Télefono de contacto</label>
+                                <input type="text" class="form-control" id="tel-compra" placeholder="811-568-1823" pattern="^\d{3}-\d{3}-\d{4}$" required>
+                                <label>Dirección</label>
+                                <input type="text" class="form-control" id="dir-compra" required>
+                                <div class="mt-3 modal-footer">
+                                    <button type="button" class="btn col-sm-3 bg-danger text-white" data-bs-dismiss="modal">Cerrar</button>
+                                    <button class="btn col-sm-3 bg-success text-white" type="submit">Ordenar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <hr class="py-0" style="height:10px; opacity: 1; color: #0D6EFD; background-color: #0D6EFD">
+            <nav class="px-5 navbar bg-success">
+                <div class="row container-fluid">
+                    <div class="col-sm-7">
+                        <a class="navbar-brand" href='/'>
+                            <img src="img/LogoTI.png" alt="Logo" width="50px">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <p class="text-white">
+                            ¡Desde equipos que no sirven hasta usuarios que no saben!
+                        </p>
+                    </div>
+                </div>
+            </nav>
+        </footer>
+	<script>
+		let servicios;
+		$(document).ready(() => {
+			$.ajax({
+				url: "most_freq.php",
+				type: "POST",
+				success: (result) => {
+					servicios = JSON.parse(result)["servicios"];
+					servicios.forEach((servicio, i) => {
+						$("#nom" + i).text(servicio["nombre"]);
+						$("#img" + i).attr("src", "img/" + servicio["img"]);
+						$("#desc" + i).text(servicio["descripcion"]);
+					});
+				}
+			});
+	    	});
+
+		let servicioActivo = -1;
+
+		function compra(i) {
+			servicioActivo = i;
+			$("#servicio_comprar").text(servicios[i]["name"]);
+			$("#modal_comprar").modal("toggle");
+		}
+
+		$("#registro-mail").on("submit", () => {
+			$.ajax({
+				async: false,
+				url: "register_user.php",
+				type: "POST",
+				data: {
+					nombre: $("#nombre").val(),
+					correo: $("#correo").val()
+				},
+				success: () => {
+					alert("Registrado OwO");
+				} 
+			});
+		});
+
+		$("#form-compra").on("submit", () => {
+			$.ajax({
+				async: false,
+				url: "save_orders.php",
+				data: {
+					nombre: $("#nom-compra").val(),
+					telefono: $("#tel-compra").val(),
+					direccion: $("#dir-compra").val()
+				},
+				type: "POST",
+				success: () => {
+					$.ajax({
+						async: false,
+						url: "update_cant.php",
+						data: {
+							id: servicios[servicioActivo]["id"],
+							cant: Number(servicios[servicioActivo]["cant"]) + 1
+						},
+						type: "POST",
+						success: () => {
+							alert("Orden hecha OwO");
+						}
+					});
+				}
+			});
+		});
+        </script>
+    </body>
+</html>
