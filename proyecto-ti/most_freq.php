@@ -11,7 +11,7 @@ if (!$conn) {
 	die("Connection failed: " . mysqli_connect_error());
 }
 
-$result = mysqli_query($conn, "SELECT * FROM services ORDER BY cant DESC LIMIT 3");
+$result = mysqli_query($conn, "SELECT * FROM services ORDER BY cant DESC LIMIT 3;");
 
 echo '{"servicios":[';
 for ($i = 0; $i < 3; $i++) {

@@ -1,4 +1,4 @@
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="UTF-8">
@@ -91,7 +91,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="modal" id="modal_comprar">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
@@ -118,9 +117,7 @@
                     </div>
                 </div>
             </div>
-
         </main>
-
         <footer class="footer">
             <hr class="py-0" style="height:10px; opacity: 1; color: #0D6EFD; background-color: #0D6EFD">
             <nav class="px-5 navbar bg-success">
@@ -138,72 +135,72 @@
                 </div>
             </nav>
         </footer>
-	<script>
-		let servicios;
-		$(document).ready(() => {
-			$.ajax({
-				url: "most_freq.php",
-				type: "POST",
-				success: (result) => {
-					servicios = JSON.parse(result)["servicios"];
-					servicios.forEach((servicio, i) => {
-						$("#nom" + i).text(servicio["nombre"]);
-						$("#img" + i).attr("src", "img/" + servicio["img"]);
-						$("#desc" + i).text(servicio["descripcion"]);
-					});
-				}
-			});
-	    	});
-
-		let servicioActivo = -1;
-
-		function compra(i) {
-			servicioActivo = i;
-			$("#servicio_comprar").text(servicios[i]["name"]);
-			$("#modal_comprar").modal("toggle");
-		}
-
-		$("#registro-mail").on("submit", () => {
-			$.ajax({
-				async: false,
-				url: "register_user.php",
-				type: "POST",
-				data: {
-					nombre: $("#nombre").val(),
-					correo: $("#correo").val()
-				},
-				success: () => {
-					alert("Registrado OwO");
-				} 
-			});
-		});
-
-		$("#form-compra").on("submit", () => {
-			$.ajax({
-				async: false,
-				url: "save_orders.php",
-				data: {
-					nombre: $("#nom-compra").val(),
-					telefono: $("#tel-compra").val(),
-					direccion: $("#dir-compra").val()
-				},
-				type: "POST",
-				success: () => {
-					$.ajax({
-						async: false,
-						url: "update_cant.php",
-						data: {
-							id: servicios[servicioActivo]["id"],
-							cant: Number(servicios[servicioActivo]["cant"]) + 1
-						},
-						type: "POST",
-						success: () => {
-							alert("Orden hecha OwO");
-						}
-					});
-				}
-			});
-		});
+        <script>
+            let servicios;
+            $(document).ready(() => {
+                $.ajax({
+                    url: "most_freq.php",
+                    type: "POST",
+                    success: (result) => {
+                        servicios = JSON.parse(result)["servicios"];
+                        servicios.forEach((servicio, i) => {
+                            $("#nom" + i).text(servicio["nombre"]);
+                            $("#img" + i).attr("src", "img/" + servicio["img"]);
+                            $("#desc" + i).text(servicio["descripcion"]);
+                        });
+                    }
+                });
+            });
+            
+            let servicioActivo = -1;
+            
+            function compra(i) {
+                servicioActivo = i;
+                $("#servicio_comprar").text(servicios[i]["name"]);
+                $("#modal_comprar").modal("toggle");
+            }
+            
+            $("#registro-mail").on("submit", () => {
+                $.ajax({
+                    async: false,
+                    url: "register_user.php",
+                    type: "POST",
+                    data: {
+                        nombre: $("#nombre").val(),
+                        correo: $("#correo").val()
+                    },
+                    success: () => {
+                        alert("Registrado OwO");
+                    }
+                });
+            });
+            
+            $("#form-compra").on("submit", () => {
+                $.ajax({
+                    async: false,
+                    url: "save_orders.php",
+                    data: {
+                        nombre: $("#nom-compra").val(),
+                        telefono: $("#tel-compra").val(),
+                        direccion: $("#dir-compra").val()
+                    },
+                    type: "POST",
+                    success: () => {
+                        $.ajax({
+                            async: false,
+                            url: "update_cant.php",
+                            data: {
+                                id: servicios[servicioActivo]["id"],
+                                cant: Number(servicios[servicioActivo]["cant"]) + 1
+                            },
+                            type: "POST",
+                            success: () => {
+                                alert("Orden hecha OwO");
+                            }
+                        });
+                    }
+                });
+            });
         </script>
     </body>
 </html>
