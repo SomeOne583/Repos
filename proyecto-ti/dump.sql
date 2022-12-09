@@ -12,7 +12,12 @@ CREATE TABLE services (
         cant        INT
 );
 
-INSERT INTO services (nombre, descripcion, img, cant) VALUES ("Reparacion de celular", "Reparacion de fallos tanto fisicos como de software de tu dispositivo celular", "s1.svg", 0), ("Reparacion de laptop", "Reparacion de fallos tanto fisicos como de software de tu laptop", "s2.svg", 0), ("Reparacion de impresora", "Reparacion de fallos tanto fisicos como de software de tu dispositivo de impresion", "s3.svg", 0), ("Reparacion de electrodomesticos", "Reparacion de fallos fisicos en tus electrodomesticos", "s4.svg", 0), ("Ayuda para uso de electronicos", "Te ayudamos cuando tienes problemas para usar tus dispositivos electronicos", "s5.svg", 0);
+INSERT INTO services (nombre, descripcion, img, cant) VALUES 
+("Reparacion de celular", "Reparacion de fallos tanto fisicos como de software de tu dispositivo celular", "s1.svg", 0), 
+("Reparacion de laptop", "Reparacion de fallos tanto fisicos como de software de tu laptop", "s2.svg", 0), 
+("Reparacion de impresora", "Reparacion de fallos tanto fisicos como de software de tu dispositivo de impresion", "s3.svg", 0), 
+("Reparacion de electrodomesticos", "Reparacion de fallos fisicos en tus electrodomesticos", "s4.svg", 0), 
+("Ayuda para uso de electronicos", "Te ayudamos cuando tienes problemas para usar tus dispositivos electronicos", "s5.svg", 0);
 
 CREATE TABLE orders (
         id          INT PRIMARY KEY AUTO_INCREMENT,
